@@ -6,11 +6,14 @@ public class Wallet {
 
     private int saldo;
     private boolean tieneLimite;
+    private int meta;
+
 
     public Wallet() {
         super();
         saldo = 0;
         tieneLimite = true;
+        meta = 0;
     }
    
     public int getSaldo() {
@@ -19,6 +22,27 @@ public class Wallet {
 
     public boolean getTieneLimite() {
         return tieneLimite;
+    }
+
+    public verificarMeta() {
+        if(meta == 0 || meta > saldo){
+            return false;
+        }
+        return true;
+
+    }
+
+    public boolean establecerMeta(int value){
+        if(value == 0){
+            meta = value;
+            return true;
+        }
+        if(value < 0 || value <= saldo || (value > CAPACIDAD_MAXIMA && tieneLimite)){
+            return false;
+        }
+        meta = value;
+        return true;
+
     }
 
     public void setTieneLimite(boolean newTieneLimite) {
@@ -52,7 +76,17 @@ public class Wallet {
             return "Has roto los limites";
         }
         return "No tiene saldo suficiente" ;
+
     }
 
+    public boolean establecerMeta(int value){
+       if value == 0;
+       return "no hay meta asignada";
+       if value <= 0;
+       return "No puede establecer meta negativa";
+       if saldo >= value;
+       return "transaccion exitosa"
+
+    }
 
 }
