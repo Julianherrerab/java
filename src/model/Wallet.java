@@ -24,7 +24,7 @@ public class Wallet {
         return tieneLimite;
     }
 
-    public verificarMeta() {
+    public boolean verificarMeta() {
         if(meta == 0 || meta > saldo){
             return false;
         }
@@ -55,7 +55,7 @@ public class Wallet {
         }
         saldo += value; // saldo = saldo + value 
         if(verificarMeta()){System.out.println("has cumplido la meta");}
-        return " Transaccion exitosa, nuev saldo " + saldo;
+        return " Transaccion exitosa, nuevo saldo " + saldo;
     }
 
     public String getMoney(int value){
@@ -80,14 +80,16 @@ public class Wallet {
 
     }
 
-    public boolean establecerMeta(int value){
-       if value == 0;
-       return "no hay meta asignada";
-       if value <= 0;
-       return "No puede establecer meta negativa";
-       if saldo >= value;
-       return "transaccion exitosa"
 
+public String compararCuenta(Wallet otraWallet) {
+    if(saldo == otraWallet.getSaldo()){
+        return "Las cuentas tienen el mismo saldo";
     }
+    if (saldo > otraWallet.getSaldo()) {
+        return "la primera cuenta es mayor";
+    }
+    return "La segunda cuenta es mayor";
+
+}
 
 }

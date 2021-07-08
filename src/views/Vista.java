@@ -4,7 +4,7 @@ import model.Wallet;
 
 public class Vista {
 
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         Wallet wallet1 = new Wallet();
         Wallet wallet2 = new Wallet();
         wallet1.getSaldo();
@@ -18,6 +18,6 @@ public class Vista {
         System.out.println(wallet2.establecerMeta(1100000));
         System.out.println(wallet1.establecerMeta(900000));
         System.out.println(wallet1.establecerMeta(1900000));
-        System.out.println(wallet1.safemoney(1200000));
+        System.out.println(wallet1.safeMoney(1200000));
     }
 }
