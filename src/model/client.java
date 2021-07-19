@@ -9,6 +9,12 @@ public class Client extends User {
         setNombre(pNombre);
     }
 
+    /**
+     * 
+     * 
+     * @return
+     */
+
     public Wallet getWallet() {
         return wallet;
     }
