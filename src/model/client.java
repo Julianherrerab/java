@@ -1,17 +1,19 @@
 package model;
 
-public class client extends User {
+public class Client extends User {
     private Wallet wallet;
 
-    public client(String nNombre) {
+    public Client(String pNombre) {
         super();
         wallet = new Wallet();
-        setNombre(nNombre);
+        setNombre(pNombre);
     }
 
     public Wallet getWallet() {
-    return wallet;
+        return wallet;
     }
-
-
+    
+    public String toString(){
+        return "soy un cliente";
+    }
 }
